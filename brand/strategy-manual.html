@@ -1,0 +1,640 @@
+<title>The Call Sheet</title>
+<style>
+  :root {
+    --bg: #F7EFDD;
+    --bg-panel: #EFE4C6;
+    --bg-panel-2: #E7DAB4;
+    --ink: #2A1F16;
+    --ink-soft: #6B5A45;
+    --ink-faint: #8C7A62;
+    --accent: #E8432E;
+    --accent-ink: #FFFFFF;
+    --deep: #7A1F2B;
+    --gold: #A9812F;
+    --line: rgba(42,31,22,0.15);
+    --line-strong: rgba(42,31,22,0.28);
+
+    --font-display: ui-serif, Georgia, "Iowan Old Style", "Palatino Linotype", "Times New Roman", serif;
+    --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    --font-mono: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #1B1410;
+      --bg-panel: #241A14;
+      --bg-panel-2: #2E2119;
+      --ink: #F3E7CE;
+      --ink-soft: #C9B79A;
+      --ink-faint: #9C8B71;
+      --accent: #FF7259;
+      --accent-ink: #1B1410;
+      --deep: #FF9585;
+      --gold: #D9B45C;
+      --line: rgba(243,231,206,0.14);
+      --line-strong: rgba(243,231,206,0.26);
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --bg: #1B1410;
+    --bg-panel: #241A14;
+    --bg-panel-2: #2E2119;
+    --ink: #F3E7CE;
+    --ink-soft: #C9B79A;
+    --ink-faint: #9C8B71;
+    --accent: #FF7259;
+    --accent-ink: #1B1410;
+    --deep: #FF9585;
+    --gold: #D9B45C;
+    --line: rgba(243,231,206,0.14);
+    --line-strong: rgba(243,231,206,0.26);
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--font-body);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; }
+  }
+
+  .wrap {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  /* ---------- Slate / cover ---------- */
+
+  .slate {
+    padding: 3.5rem 0 2.5rem;
+    border-bottom: 1px solid var(--line-strong);
+  }
+
+  .slate-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-bottom: 2.2rem;
+  }
+  .slate-meta span b {
+    color: var(--ink-soft);
+    font-weight: 600;
+  }
+
+  .brand-mark {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 600;
+    font-size: clamp(2.4rem, 7vw, 4.2rem);
+    line-height: 1.02;
+    letter-spacing: -0.01em;
+    color: var(--accent);
+    text-wrap: balance;
+    margin: 0;
+  }
+  .brand-mark small {
+    display: block;
+    font-style: normal;
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin-top: 0.9rem;
+  }
+
+  .doc-title {
+    margin: 1.6rem 0 0;
+    font-family: var(--font-display);
+    font-size: clamp(1.6rem, 4vw, 2.1rem);
+    color: var(--ink);
+  }
+  .doc-sub {
+    margin: 0.5rem 0 0;
+    color: var(--ink-soft);
+    max-width: 52ch;
+    font-size: 1.02rem;
+  }
+
+  /* ---------- Acts ---------- */
+
+  .act {
+    padding: 3rem 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .act:last-of-type { border-bottom: none; }
+
+  .act-head {
+    display: flex;
+    align-items: baseline;
+    gap: 0.9rem;
+    margin-bottom: 1.6rem;
+  }
+  .act-num {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    color: var(--gold);
+    letter-spacing: 0.08em;
+  }
+  .act-title {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: clamp(1.5rem, 3.4vw, 1.9rem);
+    margin: 0;
+    color: var(--ink);
+  }
+
+  .act p { margin: 0 0 1rem; max-width: 62ch; color: var(--ink); }
+  .act p.lede { font-size: 1.08rem; color: var(--ink-soft); }
+  .act p:last-child { margin-bottom: 0; }
+
+  .label {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+  }
+
+  /* ---------- Position bars (Act I) ---------- */
+
+  .position {
+    margin-top: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+  }
+  .position-row {
+    display: grid;
+    grid-template-columns: 9rem 1fr auto;
+    gap: 0.8rem;
+    align-items: center;
+  }
+  .position-row .label { grid-column: 1; }
+  .position-track {
+    height: 10px;
+    border-radius: 999px;
+    background: var(--bg-panel-2);
+    position: relative;
+    overflow: hidden;
+  }
+  .position-fill {
+    position: absolute;
+    top: 0; bottom: 0; left: 0;
+    border-radius: 999px;
+    background: var(--ink-faint);
+  }
+  .position-row.us .position-fill { background: var(--accent); }
+  .position-value {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    color: var(--ink-soft);
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+  }
+  .position-row.us .position-value { color: var(--accent); font-weight: 700; }
+
+  /* ---------- Voice (Act II) ---------- */
+
+  .voice-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.4rem;
+    margin-top: 1.6rem;
+  }
+  @media (max-width: 560px) { .voice-grid { grid-template-columns: 1fr; } }
+
+  .voice-card {
+    background: var(--bg-panel);
+    border-radius: 4px;
+    padding: 1.2rem 1.3rem;
+  }
+  .voice-card .label { margin-bottom: 0.6rem; display: block; }
+  .voice-card ul { margin: 0; padding-left: 1.1rem; }
+  .voice-card li { margin-bottom: 0.35rem; }
+
+  .dialogue {
+    margin: 1.8rem 0 0;
+    padding: 1.4rem 1.6rem;
+    background: var(--deep);
+    border-radius: 4px;
+    color: #fff;
+  }
+  .dialogue p {
+    color: #fff;
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 1.15rem;
+    margin: 0 0 0.3rem;
+  }
+  .dialogue p:last-child { margin-bottom: 0; }
+  .dialogue .tag {
+    display: block;
+    margin-top: 0.8rem;
+    font-family: var(--font-body);
+    font-style: normal;
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    opacity: 0.75;
+  }
+
+  /* ---------- Chapters (Act III) ---------- */
+
+  .chapters {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 1.8rem;
+  }
+  @media (max-width: 720px) { .chapters { grid-template-columns: 1fr; } }
+
+  .chapter-card {
+    background: var(--bg-panel);
+    border-radius: 6px;
+    padding: 1.4rem 1.3rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+  }
+  .chapter-name {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 1.25rem;
+    color: var(--accent);
+    margin: 0;
+  }
+  .chapter-meta {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--ink-faint);
+    letter-spacing: 0.02em;
+    line-height: 1.6;
+  }
+  .chapter-price {
+    font-family: var(--font-mono);
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--ink);
+    font-variant-numeric: tabular-nums;
+  }
+  .chapter-price span {
+    font-size: 0.68rem;
+    font-weight: 400;
+    color: var(--ink-faint);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-left: 0.4rem;
+  }
+  .chapter-line {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 0.92rem;
+    color: var(--ink-soft);
+    border-top: 1px solid var(--line);
+    padding-top: 0.8rem;
+    margin: 0;
+  }
+
+  .policy-note {
+    margin-top: 1.4rem;
+    padding: 1rem 1.2rem;
+    border-left: 3px solid var(--gold);
+    background: var(--bg-panel);
+    border-radius: 0 4px 4px 0;
+    font-size: 0.94rem;
+    color: var(--ink-soft);
+  }
+
+  /* ---------- Distribution (Act IV) ---------- */
+
+  .channels {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-top: 1.6rem;
+    border-top: 1px solid var(--line);
+  }
+  .channel {
+    display: grid;
+    grid-template-columns: 9rem 1fr;
+    gap: 1.2rem;
+    padding: 1.1rem 0;
+    border-bottom: 1px solid var(--line);
+  }
+  @media (max-width: 560px) { .channel { grid-template-columns: 1fr; gap: 0.3rem; } }
+  .channel .label { padding-top: 0.15rem; }
+  .channel-body b { color: var(--ink); }
+  .channel-body p { margin: 0; color: var(--ink-soft); font-size: 0.95rem; }
+  .pill {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.66rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 0.15rem 0.5rem;
+    border-radius: 999px;
+    margin-left: 0.5rem;
+    background: var(--bg-panel-2);
+    color: var(--ink-soft);
+  }
+  .pill.hold { color: var(--accent); border: 1px solid var(--accent); background: transparent; }
+
+  /* ---------- Schedule (Act V) ---------- */
+
+  .schedule {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.6rem;
+    flex-wrap: wrap;
+  }
+  .schedule-card {
+    flex: 1 1 160px;
+    background: var(--bg-panel);
+    border-radius: 6px;
+    padding: 1.1rem 1.2rem;
+  }
+  .schedule-card .num {
+    font-family: var(--font-mono);
+    font-size: 1.8rem;
+    color: var(--accent);
+    font-variant-numeric: tabular-nums;
+  }
+  .schedule-card .cap { font-size: 0.85rem; color: var(--ink-soft); margin-top: 0.2rem; }
+
+  /* ---------- Roadmap (Act VI) ---------- */
+
+  .roadmap {
+    margin-top: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+  }
+  .phase {
+    display: grid;
+    grid-template-columns: 1.6rem 1fr;
+    gap: 0.9rem;
+    padding: 0.9rem 1rem;
+    border-radius: 4px;
+    background: var(--bg-panel);
+  }
+  .phase.active {
+    background: var(--accent);
+  }
+  .phase.active * { color: var(--accent-ink) !important; }
+  .phase-dot {
+    width: 0.55rem; height: 0.55rem;
+    border-radius: 999px;
+    background: var(--ink-faint);
+    margin-top: 0.4rem;
+  }
+  .phase.active .phase-dot { background: var(--accent-ink); }
+  .phase-name { font-weight: 700; margin: 0 0 0.2rem; }
+  .phase-skills { font-family: var(--font-mono); font-size: 0.76rem; color: var(--ink-soft); }
+  .phase.active .phase-skills { color: var(--accent-ink); opacity: 0.85; }
+
+  /* ---------- Continuity notes ---------- */
+
+  .continuity {
+    margin-top: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .note {
+    display: grid;
+    grid-template-columns: 1.4rem 1fr;
+    gap: 0.8rem;
+    padding: 0.85rem 0;
+    border-bottom: 1px dashed var(--line-strong);
+    font-size: 0.95rem;
+  }
+  .note:last-child { border-bottom: none; }
+  .note-mark { color: var(--gold); font-family: var(--font-mono); }
+  .note b { color: var(--ink); }
+  .note span.who { color: var(--ink-faint); font-size: 0.82rem; }
+
+  footer {
+    padding: 2.5rem 0 3.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--ink-faint);
+    letter-spacing: 0.02em;
+  }
+</style>
+
+<div class="wrap">
+
+  <div class="slate">
+    <div class="slate-meta">
+      <span>Production: <b>I Love You Barcelona</b></span>
+      <span>Status: <b>Pre-Launch / Portfolio Phase</b></span>
+      <span>Cut: <b>v1 &mdash; 08 Aug 2026</b></span>
+    </div>
+    <p class="brand-mark">I love you<br>Barcelona<small>Fine Art Couples Photography</small></p>
+    <h1 class="doc-title">The Call Sheet</h1>
+    <p class="doc-sub">Everything decided so far about the brand, the offer, and where it goes next &mdash; written down so it doesn't have to live in your head alone.</p>
+  </div>
+
+  <section class="act">
+    <div class="act-head"><span class="act-num">ACT I</span><h2 class="act-title">The Story</h2></div>
+    <p class="lede">You're not a photo studio. You're a couple, photographing couples &mdash; which is why the work doesn't look staged. Two working artists (Nuria Alf&eacute;rez and her partner) merged their personal visual languages into one brand, built around direction and styling instead of a snapshot in front of a landmark.</p>
+    <p>That's the whole positioning: Barcelona has no shortage of couple photographers. It has almost none who direct, style, and treat a 90-minute session like a short film.</p>
+
+    <div class="position">
+      <div class="position-row">
+        <span class="label">Generic BCN sessions</span>
+        <div class="position-track"><div class="position-fill" style="left:6%; width:30%;"></div></div>
+        <span class="position-value">&euro;250&ndash;450</span>
+      </div>
+      <div class="position-row us">
+        <span class="label">I Love You Barcelona</span>
+        <div class="position-track"><div class="position-fill" style="left:28%; width:26%;"></div></div>
+        <span class="position-value">&euro;400&ndash;650</span>
+      </div>
+      <div class="position-row">
+        <span class="label">Full wedding coverage</span>
+        <div class="position-track"><div class="position-fill" style="left:60%; width:38%;"></div></div>
+        <span class="position-value">&euro;2,000&ndash;6,500</span>
+      </div>
+    </div>
+    <p style="margin-top:0.9rem; font-size:0.9rem; color:var(--ink-faint);">Sits clearly above the generic tourist-photo floor, well below wedding-tier &mdash; the boutique bracket, priced for direction and artistry rather than volume.</p>
+  </section>
+
+  <section class="act">
+    <div class="act-head"><span class="act-num">ACT II</span><h2 class="act-title">The Voice</h2></div>
+    <p class="lede">Romantic, never meloso. Real couples, real connection &mdash; strong and a little unfiltered, not a greeting card.</p>
+
+    <div class="voice-grid">
+      <div class="voice-card">
+        <span class="label">Use</span>
+        <ul>
+          <li>story, chapter, real, direction</li>
+          <li>styled, cinematic, connection</li>
+          <li>short, dialogue-style lines</li>
+        </ul>
+      </div>
+      <div class="voice-card">
+        <span class="label">Avoid</span>
+        <ul>
+          <li>"perfect," generic romance clich&eacute;s</li>
+          <li>anything that reads staged or corporate</li>
+          <li>long descriptive paragraphs &mdash; nobody stops to read them</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="dialogue">
+      <p>&mdash; I love you.</p>
+      <p>&mdash; I love you too.</p>
+      <span class="tag">Card back &middot; the brand's signature device</span>
+    </div>
+    <p style="margin-top:1rem; font-size:0.9rem; color:var(--ink-faint);">Every chapter gets its own two-line exchange instead of a paragraph of copy &mdash; the same device that's already on the printed card.</p>
+  </section>
+
+  <section class="act">
+    <div class="act-head"><span class="act-num">ACT III</span><h2 class="act-title">The Offer</h2></div>
+    <p class="lede">Three chapters, three moods. Same care, same attention, regardless of which one is booked.</p>
+
+    <div class="chapters">
+      <div class="chapter-card">
+        <p class="chapter-name">Love &amp; The City</p>
+        <p class="chapter-meta">Barcelona city locations<br>1.5 hours &middot; 15&ndash;20 edited photos</p>
+        <p class="chapter-price">&euro;400</p>
+        <p class="chapter-line">&ldquo;Stay a little longer.&rdquo;<br>&ldquo;I wasn't planning on leaving.&rdquo;</p>
+      </div>
+      <div class="chapter-card">
+        <p class="chapter-name">Wild At Heart</p>
+        <p class="chapter-meta">Nature, coast, or mountains<br>2 hours &middot; 20&ndash;25 edited photos</p>
+        <p class="chapter-price">&euro;550</p>
+        <p class="chapter-line">&ldquo;Where are we going?&rdquo;<br>&ldquo;Wherever the light takes us.&rdquo;</p>
+      </div>
+      <div class="chapter-card">
+        <p class="chapter-name">In The Mood For Love</p>
+        <p class="chapter-meta">Choice of location<br>2 hours &middot; 15&ndash;20 curated photos</p>
+        <p class="chapter-price">&euro;650</p>
+        <p class="chapter-line">&ldquo;Don't look at the camera.&rdquo;<br>&ldquo;I wasn't.&rdquo;</p>
+      </div>
+    </div>
+
+    <div class="policy-note">No repeat-session guarantee &mdash; confidence in the work covers that. Reassurance instead comes from weather rescheduling and full privacy on Chapter III: nothing is ever shared without permission.</div>
+  </section>
+
+  <section class="act">
+    <div class="act-head"><span class="act-num">ACT IV</span><h2 class="act-title">Where We're Found</h2></div>
+    <p class="lede">One brand, tiered by channel &mdash; the full story lives on the site; marketplaces get the easy entry point.</p>
+
+    <div class="channels">
+      <div class="channel">
+        <span class="label">Own site</span>
+        <div class="channel-body">
+          <p><b>www.iloveyoubcn.com</b> &mdash; primary channel. <span class="pill">Full brand</span><span class="pill">All 3 chapters</span><span class="pill">Full price</span></p>
+        </div>
+      </div>
+      <div class="channel">
+        <span class="label">Google search</span>
+        <div class="channel-body">
+          <p>Chosen deliberately over Instagram as the main discovery engine &mdash; doesn't depend on an algorithm you don't control.</p>
+        </div>
+      </div>
+      <div class="channel">
+        <span class="label">Airbnb / Viator</span>
+        <div class="channel-body">
+          <p>One simplified listing only (Love &amp; The City equivalent), capped at 0&ndash;1 booking/month while capacity stays limited. <span class="pill hold">Price TBD</span></p>
+        </div>
+      </div>
+      <div class="channel">
+        <span class="label">Print / local</span>
+        <div class="channel-body">
+          <p>Card design approved and going to print. <span class="pill hold">Distribution method TBD</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="act">
+    <div class="act-head"><span class="act-num">ACT V</span><h2 class="act-title">The Schedule</h2></div>
+    <p class="lede">Scarcity here isn't a marketing trick &mdash; it's the real shooting calendar. Worth saying so, out loud, on the site.</p>
+
+    <div class="schedule">
+      <div class="schedule-card"><div class="num">1&ndash;3</div><div class="cap">sessions / month, today &mdash; Tuesdays only</div></div>
+      <div class="schedule-card"><div class="num">4&ndash;8</div><div class="cap">sessions / month, once scaled</div></div>
+      <div class="schedule-card"><div class="num">&euro;</div><div class="cap">Goal: supplemental income first, not full-time yet</div></div>
+    </div>
+  </section>
+
+  <section class="act">
+    <div class="act-head"><span class="act-num">ACT VI</span><h2 class="act-title">The Roadmap</h2></div>
+    <p class="lede">Where the business is right now, and what comes after.</p>
+
+    <div class="roadmap">
+      <div class="phase active">
+        <div class="phase-dot"></div>
+        <div>
+          <p class="phase-name">Phase 1 &mdash; Foundation (now)</p>
+          <p class="phase-skills">copywriting &middot; offers &middot; schema / site-architecture</p>
+        </div>
+      </div>
+      <div class="phase">
+        <div class="phase-dot"></div>
+        <div>
+          <p class="phase-name">Phase 2 &mdash; Soft Launch</p>
+          <p class="phase-skills">launch &middot; public-relations &middot; co-marketing</p>
+        </div>
+      </div>
+      <div class="phase">
+        <div class="phase-dot"></div>
+        <div>
+          <p class="phase-name">Phase 3 &mdash; First Bookings</p>
+          <p class="phase-skills">social &middot; customer-research &middot; referrals</p>
+        </div>
+      </div>
+      <div class="phase">
+        <div class="phase-dot"></div>
+        <div>
+          <p class="phase-name">Phase 4 &mdash; Scale</p>
+          <p class="phase-skills">analytics &middot; cro / ab-testing &middot; emails</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="act">
+    <div class="act-head"><span class="act-num">CONTINUITY</span><h2 class="act-title">Open Notes</h2></div>
+    <p class="lede">Loose threads &mdash; nothing here blocks moving forward, just things to close out.</p>
+
+    <div class="continuity">
+      <div class="note"><span class="note-mark">&mdash;</span><div><b>Co-founder's name</b> still needed for the About page. <span class="who">Nuria Alf&eacute;rez confirmed; partner's name pending.</span></div></div>
+      <div class="note"><span class="note-mark">&mdash;</span><div><b>Marketplace listing price</b> not yet set &mdash; needs its own number, separate from direct-site pricing.</div></div>
+      <div class="note"><span class="note-mark">&mdash;</span><div><b>Card distribution method</b> undecided &mdash; street-cast, discount code, or hotel/planner partners.</div></div>
+      <div class="note"><span class="note-mark">&mdash;</span><div><b>Customer language</b> not yet gathered &mdash; capture it from the first completed portfolio sessions.</div></div>
+      <div class="note"><span class="note-mark">&mdash;</span><div><b>Model release / consent process</b> for Chapter III should be formalized before the first booking.</div></div>
+    </div>
+  </section>
+
+  <footer>
+    <span>@iloveyoutoobcn &middot; www.iloveyoubcn.com</span>
+    <span>Updates as decisions are made</span>
+  </footer>
+
+</div>

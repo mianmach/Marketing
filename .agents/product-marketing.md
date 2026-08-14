@@ -1,14 +1,15 @@
 # Product Marketing Context
 
-**Document version:** v1
-**Last updated:** 2026-08-08
+**Document version:** v2
+**Last updated:** 2026-08-14
 
 ## Product Overview
 **One-liner:** A boutique couple-photography experience in Barcelona — styled, directed, and cinematic, built for real connection instead of posed tourist photos.
-**What it does:** I Love You Barcelona is run by two photographer-artists (a couple) who direct and style intimate photo sessions across three "chapters" — city, nature, and intimate — designed to feel like a real moment, not a staged shot in front of a landmark.
+**What it does:** I Love You Barcelona is run by Nuria Alférez and Miguel Manzano — two photographer-artists (a couple) who direct and style intimate photo sessions across three "chapters" — *Love & The City*, *Wild At Heart*, and *In The Mood For Love* — designed to feel like a real moment, not a staged shot in front of a landmark.
 **Product category:** Couple / romantic photography experience (Barcelona)
 **Product type:** Local creative service — in-person session + edited digital gallery
-**Business model:** Per-session pricing, three tiers. Future planned upsell: a personalized printed calendar, offered seasonally (e.g. Nov/Dec) to past clients — not live yet.
+**Business model:** Per-session pricing, three tiers (€400 / €550 / €650). No repeat-session guarantee offered. Future planned upsell: a personalized printed calendar, offered seasonally (e.g. Nov/Dec) to past clients — not live yet.
+**Site:** www.iloveyoubcn.com · Instagram (brand): @iloveyoutoobcn
 
 ## Target Audience
 **Target customers:** Couples — both Barcelona locals and tourists/visitors who book in advance.
@@ -42,7 +43,7 @@ Not applicable — B2C, single decision-maker unit (the couple).
 
 ## Differentiation
 **Key differentiators:**
-- Run by a real couple — two photographer-artists with their own fine-art/editorial portfolios (@ojodearbol, @nuria.alferez) — merging two visual styles into one brand
+- Run by a real couple — Nuria Alférez and Miguel Manzano, two photographer-artists with their own fine-art/editorial portfolios (@nuria.alferez, @ojodearbol) — merging two visual styles into one brand
 - Full creative direction + styling, cinematic mood (chapters named after films: *Love & The City*, *Wild At Heart*, *In The Mood For Love*)
 - Deliberately non-iconic, personality-driven locations
 - Three distinct experiences instead of one generic package — including a tasteful intimate/sensual tier, rare in this market
@@ -87,8 +88,8 @@ Not applicable — B2C, single decision-maker unit (the couple).
 **Customers:** None named yet — currently building portfolio through test sessions.
 **Instagram:**
 - @iloveyoutoobcn — brand feed, main portfolio proof for prospective clients
-- @ojodearbol — co-founder's personal fine-art portfolio (nature/sensual editorial work)
-- @nuria.alferez — co-founder's (Nuria Alférez) personal fine-art portfolio (editorial/sensual portrait work)
+- @ojodearbol — Miguel Manzano's personal fine-art portfolio (nature/sensual editorial work)
+- @nuria.alferez — Nuria Alférez's personal fine-art portfolio (editorial/sensual portrait work)
 **Testimonials:** None yet — TBD as portfolio sessions complete.
 **Value themes:**
 | Theme | Proof |
@@ -100,7 +101,10 @@ Not applicable — B2C, single decision-maker unit (the couple).
 **Business goal:** Move from portfolio-building/pre-launch to first paying bookings; establish local reputation in Barcelona.
 **Conversion action:** Submit inquiry via contact form (no booking calendar yet — planned for later).
 **Current metrics:** None — pre-launch.
+**Capacity:** 1–3 sessions/month today (Tuesdays only), scalable to 4–8/month later. Current goal is supplemental income, not full-time. Scarcity ("only 1–3 couples a month") is treated as an honest positioning point, not manufactured urgency.
+**Distribution strategy:** Own site is the primary, full-brand, full-price channel (all three chapters). Airbnb Experiences / Viator get one simplified listing only (Love & The City equivalent), capped at 0–1 booking/month while capacity is limited — price TBD, separate from direct-site pricing. Google search is the intended primary discovery channel (deliberately not reliant on Instagram's algorithm).
 
 ## Changelog
 *Newest first.*
+- v2 (2026-08-14) — Added founders' real names (Nuria Alférez, Miguel Manzano); corrected chapter pricing to €400/€550/€650 with final chapter names; added site domain, capacity/scarcity positioning, and distribution channel strategy (own site vs. Airbnb/Viator).
 - v1 (2026-08-08) — Initial context, drafted from landing page copywriting sessions (hero, three chapters/pricing, Instagram proof accounts).

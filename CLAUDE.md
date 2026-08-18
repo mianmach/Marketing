@@ -9,7 +9,7 @@ Este documento resume todo lo definido hasta ahora sobre el proyecto de tienda S
 Miguel (freelance, autónomo en Barcelona, trabaja con un socio en las pitches) está construyendo y gestionando la tienda online de **Yumi**, una marca boutique de joyería con **6 tiendas físicas en Barcelona**. La propuesta posiciona la tienda online como **"la séptima tienda"**: una extensión natural de la marca física, no un canal aparte.
 
 - **Estado actual:** propuesta comercial ya presentada a Yumi (reunión ya realizada). Pendiente respuesta de Yumi y elección de plan de gestión mensual.
-- **Rol de Miguel:** diseño y construcción de la tienda en Shopify, fotografía de producto, organización de catálogo, configuración fiscal, automatizaciones de email, gestión de envíos y atención al cliente.
+- **Rol de Miguel:** diseño y construcción de la tienda en Shopify, fotografía de producto, organización de catálogo, configuración fiscal, gestión de envíos y atención al cliente.
 
 ---
 
@@ -27,11 +27,12 @@ Miguel (freelance, autónomo en Barcelona, trabaja con un socio en las pitches) 
 
 ### Fase 1 — Construcción de la tienda (pago único)
 **2.500 €**, todo incluido:
-- Fotografía profesional de producto
-- Organización y curación del catálogo
-- Diseño y construcción de la tienda en Shopify
-- Configuración fiscal ("configuración fiscal", nunca decir "legal como autónomo" en materiales de cliente)
-- Automatizaciones iniciales de email marketing
+- Fotografía profesional de producto — 34% · 850 €
+- Organización y curación del catálogo — 17% · 425 €
+- Diseño y construcción de la tienda en Shopify — 40% · 1.000 €
+- Configuración fiscal ("configuración fiscal", nunca decir "legal como autónomo" en materiales de cliente) — 9% · 225 €
+
+No incluye automatizaciones de email marketing (descartado deliberadamente — no le interesa a Miguel incluirlo en la Fase 1).
 
 ### Fase 2 — Gestión continua (mensual, Yumi elige)
 - **Opción A — Tarifa fija:** 400 €/mes, sin comisiones ni porcentajes. Precio predecible, sin cálculos.

@@ -1,7 +1,7 @@
 # Product Marketing Context
 
-**Document version:** v2
-**Last updated:** 2026-08-14
+**Document version:** v3
+**Last updated:** 2026-08-20
 
 ## Product Overview
 **One-liner:** A boutique couple-photography experience in Barcelona — styled, directed, and cinematic, built for real connection instead of posed tourist photos.
@@ -9,7 +9,7 @@
 **Product category:** Couple / romantic photography experience (Barcelona)
 **Product type:** Local creative service — in-person session + edited digital gallery
 **Business model:** Per-session pricing, three tiers (€400 / €550 / €650). No repeat-session guarantee offered. Future planned upsell: a personalized printed calendar, offered seasonally (e.g. Nov/Dec) to past clients — not live yet.
-**Site:** www.iloveyoubcn.com · Instagram (brand): @iloveyoutoobcn
+**Site:** www.iloveyoubarcelona.com (hosted on Squarespace) · Instagram (brand): @iloveyoutoobcn
 
 ## Target Audience
 **Target customers:** Couples — both Barcelona locals and tourists/visitors who book in advance.
@@ -103,8 +103,10 @@ Not applicable — B2C, single decision-maker unit (the couple).
 **Current metrics:** None — pre-launch.
 **Capacity:** 1–3 sessions/month today (Tuesdays only), scalable to 4–8/month later. Current goal is supplemental income, not full-time. Scarcity ("only 1–3 couples a month") is treated as an honest positioning point, not manufactured urgency.
 **Distribution strategy:** Own site is the primary, full-brand, full-price channel (all three chapters). Airbnb Experiences / Viator get one simplified listing only (Love & The City equivalent), capped at 0–1 booking/month while capacity is limited — price TBD, separate from direct-site pricing. Google search is the intended primary discovery channel (deliberately not reliant on Instagram's algorithm).
+**SEO status (as of 2026-08-20):** Site not yet indexed by Google at all (`site:iloveyoubarcelona.com` returns zero results). Google Search Console + sitemap submission still needed before any SEO/content work can pay off. Paid search (Google Ads) is not recommended yet — site isn't indexed, capacity is only 1–3 sessions/month, and there are no testimonials/proof yet to convert cold paid traffic.
 
 ## Changelog
 *Newest first.*
+- v3 (2026-08-20) — Corrected site domain to www.iloveyoubarcelona.com (www.iloveyoubcn.com, printed on the first business card proof, does not resolve — was a card error, now fixed on card files too); added SEO status note (site not indexed yet) and Google Ads recommendation.
 - v2 (2026-08-14) — Added founders' real names (Nuria Alférez, Miguel Manzano); corrected chapter pricing to €400/€550/€650 with final chapter names; added site domain, capacity/scarcity positioning, and distribution channel strategy (own site vs. Airbnb/Viator).
 - v1 (2026-08-08) — Initial context, drafted from landing page copywriting sessions (hero, three chapters/pricing, Instagram proof accounts).

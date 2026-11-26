@@ -1,0 +1,318 @@
+<title>Blueprint de Yumi</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  /* Layout: a vertical "construction set" — sitemap, then flow, then plans for each page type, then a status checklist tying blocks back to the brief tabs. */
+  :root{
+    --bg:#F2F3EE; --surface:#FFFFFF; --surface-2:#E9EBE4;
+    --ink:#16201D; --ink-soft:#52605B; --ink-faint:#8B968F;
+    --line:#CFD5C7; --line-strong:#AEB7A4;
+    --accent:#2F6B6E; --accent-soft:#2F6B6E1F;
+    --warn:#9A6B12; --warn-soft:#9A6B121A;
+    --good:#2F6B6E; --good-soft:#2F6B6E1F;
+    --font-display:"Space Grotesk",system-ui,sans-serif;
+    --font-body:"Inter",system-ui,sans-serif;
+    --font-mono:"IBM Plex Mono",ui-monospace,"SF Mono",monospace;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#0E2430; --surface:#123244; --surface-2:#0B1E28;
+      --ink:#E9ECE8; --ink-soft:#AFC2C2; --ink-faint:#6F8B8E;
+      --line:#1E4556; --line-strong:#2C5A6C;
+      --accent:#7FD1D9; --accent-soft:#7FD1D929;
+      --warn:#E3B341; --warn-soft:#E3B34129;
+      --good:#7FD1D9; --good-soft:#7FD1D929;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0E2430; --surface:#123244; --surface-2:#0B1E28;
+    --ink:#E9ECE8; --ink-soft:#AFC2C2; --ink-faint:#6F8B8E;
+    --line:#1E4556; --line-strong:#2C5A6C;
+    --accent:#7FD1D9; --accent-soft:#7FD1D929;
+    --warn:#E3B341; --warn-soft:#E3B34129;
+    --good:#7FD1D9; --good-soft:#7FD1D929;
+    color-scheme: dark;
+  }
+
+  *{box-sizing:border-box;}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:var(--font-body); line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    padding-left:max(16px, env(safe-area-inset-left,0px));
+    padding-right:max(16px, env(safe-area-inset-right,0px));
+  }
+  @media (prefers-reduced-motion: reduce){ *{animation:none!important; transition:none!important;} }
+
+  .wrap{max-width:900px; margin:0 auto; padding-block:3rem 5rem;}
+
+  .eyebrow{
+    font-family:var(--font-mono); font-size:.72rem; letter-spacing:.08em; text-transform:uppercase;
+    color:var(--accent); display:flex; align-items:center; gap:.5rem; margin-bottom:.8rem;
+  }
+  .eyebrow::before{content:"※"; font-size:.9rem;}
+
+  h1{
+    font-family:var(--font-display); font-weight:700; font-size:clamp(1.9rem,5vw,2.6rem);
+    line-height:1.08; letter-spacing:-0.01em; margin:0 0 .6rem; text-wrap:balance;
+  }
+  .lede{color:var(--ink-soft); font-size:1.02rem; max-width:620px; margin:0 0 2.6rem;}
+
+  h2{
+    font-family:var(--font-display); font-weight:600; font-size:1.3rem; margin:0 0 .3rem;
+    display:flex; align-items:baseline; gap:.6rem;
+  }
+  h2 .tag{
+    font-family:var(--font-mono); font-size:.68rem; color:var(--ink-faint); font-weight:400;
+    letter-spacing:.04em;
+  }
+  .section-intro{color:var(--ink-soft); font-size:.92rem; max-width:640px; margin:0 0 1.2rem;}
+
+  section{margin-bottom:3.2rem;}
+  section + section{padding-top:2.6rem; border-top:1px solid var(--line);}
+
+  .diagram-card{
+    background:var(--surface); border:1px solid var(--line); border-radius:4px;
+    padding:1.2rem; overflow-x:auto;
+  }
+  .diagram-card pre.mermaid{margin:0; min-width:560px;}
+
+  .legend{display:flex; flex-wrap:wrap; gap:1.1rem; margin:.9rem 0 0; font-size:.78rem; color:var(--ink-soft);}
+  .legend span{display:inline-flex; align-items:center; gap:.4rem;}
+  .dot{width:9px; height:9px; border-radius:50%; display:inline-block;}
+
+  .plan-list{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:0;}
+  .plan-list li{
+    display:grid; grid-template-columns:2rem 1fr; gap:.9rem;
+    padding:.85rem 0; border-bottom:1px solid var(--line);
+    align-items:start;
+  }
+  .plan-list li:last-child{border-bottom:none;}
+  .plan-num{
+    font-family:var(--font-mono); font-size:.78rem; color:var(--accent); padding-top:.15rem;
+  }
+  .plan-name{font-weight:600; font-size:.96rem;}
+  .plan-desc{color:var(--ink-soft); font-size:.86rem; margin-top:.15rem;}
+  .plan-source{
+    display:inline-block; margin-top:.4rem; font-family:var(--font-mono); font-size:.68rem;
+    color:var(--ink-faint); background:var(--surface-2); border:1px solid var(--line);
+    border-radius:3px; padding:.18rem .5rem;
+  }
+
+  .plans-grid{display:grid; grid-template-columns:1fr; gap:1.6rem;}
+  @media (min-width:720px){ .plans-grid{grid-template-columns:1fr 1fr;} }
+  .plan-card{background:var(--surface); border:1px solid var(--line); border-radius:4px; padding:1.1rem 1.2rem;}
+  .plan-card h3{
+    font-family:var(--font-mono); font-size:.76rem; text-transform:uppercase; letter-spacing:.06em;
+    color:var(--ink-faint); margin:0 0 .9rem; font-weight:500;
+  }
+
+  table{width:100%; border-collapse:collapse; font-size:.86rem;}
+  caption{text-align:left; margin-bottom:.6rem;}
+  th{
+    text-align:left; font-family:var(--font-mono); font-size:.68rem; text-transform:uppercase;
+    letter-spacing:.05em; color:var(--ink-faint); font-weight:500; padding:.5rem .7rem;
+    border-bottom:1px solid var(--line-strong);
+  }
+  td{padding:.6rem .7rem; border-bottom:1px solid var(--line); vertical-align:top;}
+  tr:last-child td{border-bottom:none;}
+  .src{font-family:var(--font-mono); font-size:.76rem; color:var(--ink-soft); white-space:nowrap;}
+  .block-name{font-weight:600;}
+  .needs{color:var(--ink-soft); font-size:.84rem;}
+
+  .status-cell{display:flex; align-items:center; gap:.5rem; white-space:nowrap;}
+  .status-cell input[type="checkbox"]{
+    width:16px; height:16px; accent-color:var(--accent); cursor:pointer; margin:0;
+  }
+  .status-label{font-family:var(--font-mono); font-size:.72rem; color:var(--warn);}
+  .status-cell input:checked ~ .status-label{color:var(--good);}
+
+  .table-wrap{overflow-x:auto; border:1px solid var(--line); border-radius:4px;}
+  .table-wrap table{min-width:640px;}
+  .table-wrap thead{background:var(--surface-2);}
+
+  footer{
+    margin-top:3.5rem; padding-top:1.4rem; border-top:1px solid var(--line);
+    font-size:.78rem; color:var(--ink-faint); font-family:var(--font-mono);
+  }
+</style>
+
+<div class="wrap">
+
+  <div class="eyebrow">Yumi — Shopify, inspirado en PDPAOLA</div>
+  <h1>Blueprint del sitio</h1>
+  <p class="lede">El plano completo de la tienda ya está listo. En cuanto el Excel de la clienta venga lleno, cada bloque de abajo se llena con datos reales y se construye sin pararse a decidir estructura — eso ya quedó resuelto aquí.</p>
+
+  <section>
+    <h2>Mapa del sitio <span class="tag">sitemap</span></h2>
+    <p class="section-intro">Jerarquía completa de páginas. Las colecciones (collares, pulseras, anillos…) se multiplican según lo que la clienta defina en la pestaña 3 del Excel.</p>
+    <div class="diagram-card">
+<pre class="mermaid">
+graph TD
+    HOME["/ — Home"]
+    BUSCAR["/buscar"]
+    CARRITO["Carrito — drawer lateral"]
+    CUENTA["/cuenta"]
+
+    HOME --> NAVCOL["/colecciones — índice"]
+    HOME --> BUSCAR
+    HOME --> CUENTA
+    HOME --> CARRITO
+
+    NAVCOL --> COL1["/colecciones/collares"]
+    NAVCOL --> COL2["/colecciones/pulseras"]
+    NAVCOL --> COL3["/colecciones/anillos"]
+    NAVCOL --> COLN["/colecciones/… según tab 3"]
+
+    COL1 --> PDP["/productos/{handle} — Ficha de producto"]
+    COL2 --> PDP
+    COL3 --> PDP
+    COLN --> PDP
+    BUSCAR --> PDP
+
+    PDP --> CARRITO
+    CARRITO --> CHECKOUT["/checkout"]
+    CHECKOUT --> CONFIRM["Confirmación de pedido"]
+
+    HOME --> INST1["/paginas/sobre-nosotros"]
+    HOME --> INST2["/paginas/contacto"]
+    HOME --> INST3["/paginas/envios-y-devoluciones"]
+    HOME --> INSTN["/paginas/… según tab 3, pregunta 6"]
+</pre>
+    </div>
+  </section>
+
+  <section>
+    <h2>Flujo de compra <span class="tag">customer journey</span></h2>
+    <p class="section-intro">Cómo se mueve alguien desde que entra hasta que paga. Sirve para decidir, por página, qué botón o mensaje tiene que estar siempre visible.</p>
+    <div class="diagram-card">
+<pre class="mermaid">
+flowchart TD
+    A[Entra a la Home] --> B{¿Sabe qué busca?}
+    B -- Sí --> C[Usa el buscador]
+    B -- No --> D[Navega por colección]
+    C --> E[Ficha de producto]
+    D --> E
+    E --> F{¿La pieza tiene talla o grabado?}
+    F -- Sí --> G[Elige variante]
+    F -- No --> H[Añade al carrito]
+    G --> H
+    H --> I[Carrito lateral]
+    I --> J{¿Sigue comprando o paga?}
+    J -- Sigue comprando --> D
+    J -- Paga --> K[Checkout]
+    K --> L{¿Invitado o cuenta?}
+    L -- Invitado --> M[Envío + pago]
+    L -- Cuenta --> M
+    M --> N[Confirmación + email]
+</pre>
+    </div>
+  </section>
+
+  <section>
+    <h2>Plano de la Home <span class="tag">sección por sección</span></h2>
+    <p class="section-intro">Orden de bloques, estilo PDPAOLA: hero + prueba social + colecciones, sin saturar. Cada bloque dice de dónde sale el contenido.</p>
+    <ol class="plan-list">
+      <li><span class="plan-num">01</span><div><div class="plan-name">Header + menú principal</div><div class="plan-desc">Logo, colecciones del menú, buscador, carrito, cuenta.</div><span class="plan-source">Tab 1 · Tab 3-1</span></div></li>
+      <li><span class="plan-num">02</span><div><div class="plan-name">Hero</div><div class="plan-desc">Imagen/mensaje principal — lo primero que debe comunicar la marca.</div><span class="plan-source">Tab 4-1</span></div></li>
+      <li><span class="plan-num">03</span><div><div class="plan-name">Colecciones o piezas destacadas</div><div class="plan-desc">Carrusel de "Más vendidos" / "Novedades" / cápsula puntual.</div><span class="plan-source">Tab 4-2</span></div></li>
+      <li><span class="plan-num">04</span><div><div class="plan-name">Prueba social</div><div class="plan-desc">Reseñas, prensa o lo que la haga sentir orgullosa de mostrar.</div><span class="plan-source">Tab 4-3</span></div></li>
+      <li><span class="plan-num">05</span><div><div class="plan-name">Historia de marca (franja corta)</div><div class="plan-desc">Una línea de "Sobre nosotros" con link a la página completa.</div><span class="plan-source">Tab 1-8</span></div></li>
+      <li><span class="plan-num">06</span><div><div class="plan-name">Newsletter</div><div class="plan-desc">Captura de email — queda pendiente definir el incentivo.</div><span class="plan-source">Pendiente de definir</span></div></li>
+      <li><span class="plan-num">07</span><div><div class="plan-name">Footer</div><div class="plan-desc">Páginas institucionales, redes, legal básico.</div><span class="plan-source">Tab 3-6</span></div></li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Plano de colección y ficha de producto</h2>
+    <p class="section-intro">Las dos plantillas que se repiten para todo el catálogo — se construyen una vez y se replican por producto.</p>
+    <div class="plans-grid">
+      <div class="plan-card">
+        <h3>/colecciones/{handle}</h3>
+        <ol class="plan-list">
+          <li><span class="plan-num">01</span><div><div class="plan-name">Encabezado de colección</div><div class="plan-desc">Nombre + imagen de ambiente de la categoría.</div></div></li>
+          <li><span class="plan-num">02</span><div><div class="plan-name">Grid de producto</div><div class="plan-desc">Foto aislada, nombre, precio, variantes rápidas.</div></div></li>
+          <li><span class="plan-num">03</span><div><div class="plan-name">Filtros</div><div class="plan-desc">Por material o precio, solo si el catálogo lo justifica.</div></div></li>
+        </ol>
+      </div>
+      <div class="plan-card">
+        <h3>/productos/{handle}</h3>
+        <ol class="plan-list">
+          <li><span class="plan-num">01</span><div><div class="plan-name">Galería</div><div class="plan-desc">Foto aislada + editorial, según columna "Tipo de foto".</div></div></li>
+          <li><span class="plan-num">02</span><div><div class="plan-name">Nombre, precio, variantes</div><div class="plan-desc">Talla/grabado — botón añadir al carrito sticky en móvil.</div></div></li>
+          <li><span class="plan-num">03</span><div><div class="plan-name">Acordeones de ficha técnica</div><div class="plan-desc">Pureza del metal · medidas · cierre · ¿incluye estuche?</div></div></li>
+          <li><span class="plan-num">04</span><div><div class="plan-name">Guía de tallas</div><div class="plan-desc">Slide-out, no página aparte.</div></div></li>
+          <li><span class="plan-num">05</span><div><div class="plan-name">Productos relacionados</div><div class="plan-desc">Misma colección o "combina con".</div></div></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Checklist — qué falta por llenar</h2>
+    <p class="section-intro">Cada bloque del plano, de dónde sale el dato y si ya está. Se guarda solo en este navegador, para ir tachando mientras llega la info — no sustituye el Excel.</p>
+    <div class="table-wrap">
+      <table id="statusTable">
+        <thead>
+          <tr><th>Bloque</th><th>Qué necesita</th><th>Pestaña del Excel</th><th>Estado</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="block-name">Logo y colores de marca</td><td class="needs">Logo vectorial, HEX, tipografías</td><td class="src">1 · Marca y catálogo</td><td></td></tr>
+          <tr><td class="block-name">Tono de voz / historia</td><td class="needs">Adjetivos de marca, texto "Sobre nosotros"</td><td class="src">1 · Marca y catálogo</td><td></td></tr>
+          <tr><td class="block-name">Catálogo completo</td><td class="needs">Una fila por producto</td><td class="src">2 · Productos</td><td></td></tr>
+          <tr><td class="block-name">Precio y costo</td><td class="needs">Para margen bruto automático</td><td class="src">2 · Productos</td><td></td></tr>
+          <tr><td class="block-name">Specs de cada pieza</td><td class="needs">Pureza, medidas, cierre, estuche</td><td class="src">2 · Productos</td><td></td></tr>
+          <tr><td class="block-name">Fotografía de producto</td><td class="needs">Fotos reales por pieza, aislada/editorial</td><td class="src">2 · Productos + fotos del cliente</td><td></td></tr>
+          <tr><td class="block-name">Menú y colecciones</td><td class="needs">Lista de categorías, submenús</td><td class="src">3 · Navegación</td><td></td></tr>
+          <tr><td class="block-name">Personalización/grabado</td><td class="needs">Si aplica y cómo funciona</td><td class="src">3 · Navegación</td><td></td></tr>
+          <tr><td class="block-name">Páginas institucionales</td><td class="needs">Sobre nosotros, contacto, etc.</td><td class="src">3 · Navegación</td><td></td></tr>
+          <tr><td class="block-name">Hero de Home</td><td class="needs">Mensaje/imagen principal</td><td class="src">4 · Contenido Home</td><td></td></tr>
+          <tr><td class="block-name">Destacados de Home</td><td class="needs">Qué colecciones/piezas mostrar primero</td><td class="src">4 · Contenido Home</td><td></td></tr>
+          <tr><td class="block-name">Prueba social</td><td class="needs">Reseñas, prensa, Instagram</td><td class="src">4 · Contenido Home</td><td></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="legend">
+      <span><span class="dot" style="background:var(--warn)"></span>Pendiente</span>
+      <span><span class="dot" style="background:var(--good)"></span>Listo</span>
+    </div>
+  </section>
+
+  <footer>Blueprint Yumi · referencia PDPAOLA · tema Shopify base: Impulse / Broadcast</footer>
+</div>
+
+<script>
+(function(){
+  var KEY = "yumi-blueprint-status";
+  var state = {};
+  try { state = JSON.parse(localStorage.getItem(KEY) || "{}"); } catch(e) { state = {}; }
+
+  var rows = document.querySelectorAll("#statusTable tbody tr");
+  rows.forEach(function(row, i){
+    var cell = row.querySelectorAll("td")[3];
+    var id = "item-" + i;
+    var wrap = document.createElement("div");
+    wrap.className = "status-cell";
+    var box = document.createElement("input");
+    box.type = "checkbox";
+    box.id = id;
+    box.checked = !!state[id];
+    var label = document.createElement("label");
+    label.className = "status-label";
+    label.setAttribute("for", id);
+    label.textContent = box.checked ? "Listo" : "Pendiente";
+    box.addEventListener("change", function(){
+      label.textContent = box.checked ? "Listo" : "Pendiente";
+      state[id] = box.checked;
+      try { localStorage.setItem(KEY, JSON.stringify(state)); } catch(e) {}
+    });
+    wrap.appendChild(box);
+    wrap.appendChild(label);
+    cell.appendChild(wrap);
+  });
+})();
+</script>

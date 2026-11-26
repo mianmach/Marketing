@@ -79,7 +79,12 @@ Not applicable — B2C, single decision-maker unit (the couple).
 | Session | A single booked photo experience |
 
 ## Service Details (confirmed 2026-11-26)
-- **Deliverable:** 15–25 edited photos per session (by chapter: 15–20 / 20–25 / 15–20).
+- **Deliverable:** 15–25 edited photos per session (by chapter: 15–20 / 20–25 / 15–20), delivered via Pixieset within 10 days max. Gallery online 1 month; backup kept 1 year.
+- **On the day:** Nuria directs; both Nuria and Miguel photograph.
+- **Public email:** hola@iloveyoubarcelona.com everywhere (site, cards, print). The Gmail is internal only.
+- **Instagram:** always @iloveyouarchives. "@iloveyoutooarchives" is a known typo — fix it wherever found.
+- **Wild At Heart:** keeps its €550 price on the site.
+- **Cancellation policy:** approved — full deposit refund ≥14 days before; 13–4 days one reschedule within 6 months; ≤3 days/no-show forfeited.
 - **Direction & styling:** pre-session call to get to know each other + a moodboard built together. Styling (wardrobe) is the couple's own choice, defined together with us. On the day, Nuria directs the session.
 - **Proposals:** real service offered (price/format TBD).
 - **Privacy:** photos never published/shared without written consent; Chapter III never published unless the couple asks.

@@ -3,6 +3,7 @@
 **Idea central:** *Una pareja que fotografía parejas.* Ustedes ponen la historia; nosotros la dirigimos.
 **Reglas del manual:** frases cortas, diálogos de dos líneas, nada de "magic / timeless / perfect / essence".
 **Español:** registro mexicano (ustedes), decisión de marca.
+**Idiomas sin mezclar:** la página en inglés va toda en inglés y la de español toda en español. Única excepción: la firma "— I love you. — I love you too.", que es el nombre de la marca.
 
 Los huecos entre `[corchetes]` están pendientes de dato.
 
@@ -34,8 +35,8 @@ Los huecos entre `[corchetes]` están pendientes de dato.
 | Título | How it works | Cómo funciona |
 | 1 | **Tell us about you.** Fill in the form or message us on WhatsApp. We reply within 24 hours. | **Cuéntennos de ustedes.** Llenen el formulario o escríbannos por WhatsApp. Respondemos en menos de 24 horas. |
 | 2 | **Let's meet.** A short call to get to know each other, and a moodboard we build together: the mood, the place and what you'll wear. You choose your styling; we shape it with you. | **Nos conocemos.** Una llamada corta para conocernos y un moodboard que armamos juntos: el ambiente, el lugar y lo que van a llevar. El estilismo lo eligen ustedes; nosotros los ayudamos a definirlo. |
-| 3 | **The day.** Nuria directs every moment. You only have to be with each other. | **El día.** Nuria los dirige en cada momento. Ustedes solo tienen que estar juntos. |
-| 4 | **Your photos.** 15 to 25 edited photos in a private online gallery, within [X] days. | **Sus fotos.** De 15 a 25 fotos editadas en una galería privada en línea, en [X] días. |
+| 3 | **The day.** Nuria directs, and we both photograph. You only have to be with each other. | **El día.** Nuria los dirige y los dos fotografiamos. Ustedes solo tienen que estar juntos. |
+| 4 | **Your photos.** 15 to 25 edited photos in your private online gallery, within 10 days. | **Sus fotos.** De 15 a 25 fotos editadas en su galería privada en línea, en un máximo de 10 días. |
 
 ## 4. Las sesiones (los tres capítulos)
 
@@ -44,11 +45,10 @@ Usar los diálogos del manual: son más fuertes que los textos actuales.
 | | Love & The City | Wild At Heart | In The Mood For Love |
 |---|---|---|---|
 | Diálogo | "Stay a little longer." / "I wasn't planning on leaving." | "Where are we going?" / "Wherever the light takes us." | "Don't look at the camera." / "I wasn't." |
-| EN | Barcelona streets · 1.5 h · 15–20 photos · €400 | Coast, nature or mountains · 2 h · 20–25 photos · €550 · *[coming soon / join the list]* | Your choice of place · 2 h · 15–20 photos · €650 · **Private: nothing is ever shared without your written OK.** |
-| ES | Calles de Barcelona · 1.5 h · 15–20 fotos · 400 € | Costa, naturaleza o montaña · 2 h · 20–25 fotos · 550 € · *[muy pronto / apúntense a la lista]* | El lugar que ustedes elijan · 2 h · 15–20 fotos · 650 € · **Privado: nada se publica sin su permiso por escrito.** |
+| EN | Barcelona streets · 1.5 h · 15–20 photos · €400 | Coast, nature or mountains · 2 h · 20–25 photos · €550 | Your choice of place · 2 h · 15–20 photos · €650 · **Private: nothing is ever shared without your written OK.** |
+| ES | Calles de Barcelona · 1.5 h · 15–20 fotos · 400 € | Costa, naturaleza o montaña · 2 h · 20–25 fotos · 550 € | El lugar que ustedes elijan · 2 h · 15–20 fotos · 650 € · **Privado: nada se publica sin su permiso por escrito.** |
 
-Los diálogos se dejan en inglés en ambas versiones (son la voz cinematográfica de la marca). Si se prefieren traducidos:
-"Quédate un poco más." / "No pensaba irme." · "¿A dónde vamos?" / "A donde nos lleve la luz." · "No mires a la cámara." / "No la estaba mirando."
+Diálogos en la página **en español**: "Quédate un poco más." / "No pensaba irme." · "¿A dónde vamos?" / "A donde nos lleve la luz." · "No mires a la cámara." / "No la estaba mirando."
 
 Botón: **See all the details** / **Ver todos los detalles** → Services / Servicios.
 
@@ -86,7 +86,7 @@ Cuando haya testimonios, cada tarjeta lleva una frase de la pareja.
 - **Description ES:** Una pareja que fotografía parejas. Sesiones dirigidas y de cine en Barcelona para parejas y propuestas de matrimonio. 15–25 fotos editadas. Desde 400 €.
 
 ## Datos que faltan
-- [X] días de entrega de la galería.
+- ~~Días de entrega~~ → 10 días máximo (galería en Pixieset).
 - Precio y formato de la sesión de propuesta.
-- Qué hace Miguel el día de la sesión (¿fotografían los dos?).
-- Wild At Heart: ¿lista de espera o se oculta?
+- ~~Papel de Miguel~~ → fotografían los dos; Nuria dirige.
+- ~~Wild At Heart~~ → se queda con su precio (550 €).

@@ -1,5 +1,7 @@
 # Reservas, cancelación y cambios de fecha
 
+> ✅ **Aprobada** por Miguel el 26 nov 2026 (pendiente de revisión por gestoría antes de publicar).
+
 ## Mi recomendación (y por qué)
 
 ### Lo que hay ahora en la web, visto con ojo crítico

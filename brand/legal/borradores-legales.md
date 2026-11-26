@@ -9,10 +9,10 @@
 | **Titular**: nombre completo de quien factura (¿Nuria, Miguel o los dos?) | Aviso legal y privacidad |
 | **NIF / NIE** | Aviso legal (obligatorio por la LSSI) |
 | **Domicilio fiscal** (puede ser el de la gestoría, si la tienen) | Aviso legal |
-| **Email de contacto oficial** (la tarjeta dice `iloveyoubarcelona@gmail.com` y la web `hola@iloveyoubarcelona.com`; hay que elegir uno) | Aviso legal, privacidad y derechos |
+| ~~Email de contacto oficial~~ → **hola@iloveyoubarcelona.com** | Aviso legal, privacidad y derechos |
 | **Dónde reciben los emails del formulario** (Gmail, Google Workspace, otro) | Lista de proveedores |
-| **Dónde entregan las galerías** (Pixieset, Pic-Time, Google Drive, WeTransfer…) | Lista de proveedores |
-| **Cuánto tiempo guardan las fotos** después de entregarlas | Plazo de conservación |
+| ~~Galerías~~ → **Pixieset** | Lista de proveedores |
+| ~~Conservación~~ → galería en línea 1 mes; copia guardada 1 año | Plazo de conservación |
 | **Si usan fotos de clientes en web e Instagram** y cómo piden permiso | Cesión de imagen |
 | **Si están dados de alta como autónomos** y en qué epígrafe | Aviso legal y facturación |
 
@@ -39,7 +39,7 @@ En cumplimiento de la Ley 34/2002 de Servicios de la Sociedad de la Información
 - **Titular:** [NOMBRE COMPLETO]
 - **NIF/NIE:** [NIF]
 - **Domicilio:** [DIRECCIÓN], Barcelona, España
-- **Email:** [EMAIL]
+- **Email:** hola@iloveyoubarcelona.com
 - **Teléfono / WhatsApp:** +34 674 404 534
 
 **Actividad:** servicios de fotografía de parejas bajo la marca *I Love You Barcelona*.
@@ -58,7 +58,7 @@ En cumplimiento de la Ley 34/2002 de Servicios de la Sociedad de la Información
 Última actualización: [FECHA]
 
 **Quién es responsable de sus datos**
-[NOMBRE COMPLETO] (NIF [NIF]), [DIRECCIÓN], Barcelona. Email: [EMAIL].
+[NOMBRE COMPLETO] (NIF [NIF]), [DIRECCIÓN], Barcelona. Email: hola@iloveyoubarcelona.com.
 
 **Qué datos recogemos**
 - Los que nos dan en el formulario o por WhatsApp/email: nombre, email, teléfono, fecha preferida y lo que nos cuenten de ustedes.
@@ -79,21 +79,21 @@ Las sesiones *In The Mood For Love* no se publican nunca salvo que ustedes nos l
 **Cuánto tiempo los guardamos**
 - Consultas que no terminan en reserva: 12 meses.
 - Datos de clientes y facturas: el tiempo que exige la ley fiscal (en general, 6 años).
-- Fotografías: [PLAZO] desde la entrega. Después las borramos.
+- Fotografías: la galería en línea está disponible 1 mes; guardamos una copia de seguridad durante 1 año desde la entrega y después la borramos. Las fotos que ustedes autoricen para publicar se conservan mientras estén publicadas.
 
 **Con quién los compartimos**
 No vendemos ni cedemos sus datos. Los tratan, por cuenta nuestra, los proveedores que necesitamos para trabajar:
 - Squarespace (alojamiento de la web y del formulario), EE. UU.
 - Google (reCAPTCHA del formulario; [email, si usan Gmail/Workspace]), EE. UU.
 - WhatsApp / Meta (si nos escriben por WhatsApp), Irlanda / EE. UU.
-- [Plataforma de galerías]
+- Pixieset (entrega de galerías)
 - Wise y nuestro banco (pagos)
 - [Gestoría, si la tienen]
 
 Las transferencias a EE. UU. se hacen con empresas adheridas al Marco de Privacidad de Datos UE-EE. UU. o con las cláusulas contractuales tipo de la Comisión Europea.
 
 **Sus derechos**
-Pueden pedirnos acceder a sus datos, corregirlos, borrarlos, limitar su uso, oponerse o llevárselos a otro servicio, escribiendo a [EMAIL]. Si creen que no los tratamos bien, pueden reclamar ante la Agencia Española de Protección de Datos (www.aepd.es).
+Pueden pedirnos acceder a sus datos, corregirlos, borrarlos, limitar su uso, oponerse o llevárselos a otro servicio, escribiendo a hola@iloveyoubarcelona.com. Si creen que no los tratamos bien, pueden reclamar ante la Agencia Española de Protección de Datos (www.aepd.es).
 
 ---
 

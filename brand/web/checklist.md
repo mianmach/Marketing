@@ -9,9 +9,11 @@
 - [ ] Comprobar en el móvil que se ve el formulario de contacto y que llega el email de aviso.
 - [ ] Comprobar que el botón "Inquire" se ve al final de Services en el móvil.
 - [x] Tarjeta de Canva: cambiado `@iloveyoutooarchives` → `@iloveyouarchives` (26 nov).
-- [ ] Decidir un solo email: la tarjeta dice `iloveyoubarcelona@gmail.com`, la web `hola@iloveyoubarcelona.com`.
+- [x] Email público único: `hola@iloveyoubarcelona.com` (web, tarjetas, todo). El Gmail es solo interno. Tarjeta de Canva corregida (26 nov).
 
 ## Legal y reservas
+- [x] Política de cancelación aprobada (14 días).
+- [ ] Elegir el método de pago con tarjeta para turistas (enlace de pago).
 - [ ] Enviar los datos del titular para el aviso legal y la privacidad (lista en `brand/legal/borradores-legales.md`).
 - [ ] Publicar la política de privacidad, el aviso legal y las condiciones de reserva y cancelación; quitar los "Lorem ipsum".
 - [ ] Borrar o despublicar la página de "Accessibility Statement" si no se va a redactar, y quitarla del sitemap.
@@ -22,7 +24,7 @@
 - [ ] Nueva home con la estructura de `brand/web/home-copy.md` (EN y ES).
 - [ ] Añadir a Services: cuántas fotos se entregan (15–25), la privacidad, y qué incluye (moodboard, llamada previa, dirección de Nuria).
 - [ ] Página o sección de propuestas de matrimonio (precio por definir).
-- [ ] Wild At Heart: decidir si se lanza, se pone lista de espera o se oculta el precio.
+- [x] Wild At Heart: se queda con su precio (550 €).
 - [ ] FAQ.
 
 ## Para más adelante (apuntado)
@@ -32,5 +34,5 @@
 - [ ] Mover las etiquetas hreflang al código de cabecera de cada página (§2), para no depender de JavaScript.
 - [ ] Google Search Console: comprobar indexación y enviar el sitemap.
 - [ ] Google Business Profile.
-- [ ] Tarjeta regalo San Valentín (`brand/campanas/san-valentin-tarjeta-regalo.md`).
+- [ ] **Tarjeta regalo San Valentín** (`brand/campanas/san-valentin-tarjeta-regalo.md`). En pausa; recordatorio el sábado 28 nov.
 - [ ] Tutoriales (idea a futuro, ligada a la dirección).

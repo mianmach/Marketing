@@ -8,7 +8,7 @@
 - [ ] Quitar el hueco vacío de la home en escritorio (§4).
 - [ ] Comprobar en el móvil que se ve el formulario de contacto y que llega el email de aviso.
 - [ ] Comprobar que el botón "Inquire" se ve al final de Services en el móvil.
-- [ ] Tarjeta de Canva: cambiar `@iloveyoutooarchives` por `@iloveyouarchives` (pendiente de tu OK en Canva).
+- [x] Tarjeta de Canva: cambiado `@iloveyoutooarchives` → `@iloveyouarchives` (26 nov).
 - [ ] Decidir un solo email: la tarjeta dice `iloveyoubarcelona@gmail.com`, la web `hola@iloveyoubarcelona.com`.
 
 ## Legal y reservas

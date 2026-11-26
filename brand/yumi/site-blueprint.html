@@ -139,6 +139,13 @@
     margin-top:3.5rem; padding-top:1.4rem; border-top:1px solid var(--line);
     font-size:.78rem; color:var(--ink-faint); font-family:var(--font-mono);
   }
+
+  .callout{
+    display:flex; gap:.7rem; align-items:flex-start; background:var(--warn-soft);
+    border:1px solid var(--warn); border-radius:4px; padding:.8rem .95rem; margin:0 0 1.2rem;
+    font-size:.84rem; color:var(--ink-soft);
+  }
+  .callout b{color:var(--ink); font-family:var(--font-mono); font-size:.68rem; text-transform:uppercase; letter-spacing:.04em; white-space:nowrap;}
 </style>
 
 <div class="wrap">
@@ -182,6 +189,9 @@ graph TD
     HOME --> INST2["/paginas/contacto"]
     HOME --> INST3["/paginas/envios-y-devoluciones"]
     HOME --> INSTN["/paginas/… según tab 3, pregunta 6"]
+
+    NAVCOL --> PERSO["/colecciones/personalizacion"]
+    PERSO --> PDP
 </pre>
     </div>
   </section>
@@ -253,6 +263,22 @@ flowchart TD
   </section>
 
   <section>
+    <h2>Plano de página de Personalización <span class="tag">colección especial</span></h2>
+    <p class="section-intro">Referencia: PDPAOLA tiene una colección dedicada solo a piezas grabables/personalizables, separada del resto del catálogo. Yumi puede tener la misma, con su propio diseño.</p>
+    <div class="callout">
+      <b>Provisional</b>
+      <span>No pude abrir el link que mandaste (el sitio está bloqueado para este agente) ni la búsqueda trajo el detalle exacto de esa página. Este plano es el patrón estándar de personalización en joyería online — mándame capturas de pantalla de la página de PDPAOLA y lo ajusto línea por línea a lo que realmente tiene.</span>
+    </div>
+    <ol class="plan-list">
+      <li><span class="plan-num">01</span><div><div class="plan-name">Banner de colección</div><div class="plan-desc">Mensaje tipo "Hazlo tuyo" + imagen de una pieza grabada, distinto al hero de Home.</div></div></li>
+      <li><span class="plan-num">02</span><div><div class="plan-name">Cómo funciona (3-4 pasos)</div><div class="plan-desc">Elige la pieza → escribe tu texto/iniciales → revisa antes de confirmar → la recibes grabada.</div></div></li>
+      <li><span class="plan-num">03</span><div><div class="plan-name">Grid de piezas personalizables</div><div class="plan-desc">Solo los productos marcados como grabables, con badge "Personalizable".</div><span class="plan-source">Tab 2 · Productos (nueva columna a definir)</span></div></li>
+      <li><span class="plan-num">04</span><div><div class="plan-name">En la ficha de producto: campo de personalización</div><div class="plan-desc">Input de texto con límite de caracteres (ej. 1-3 iniciales), aviso de que las piezas grabadas no tienen devolución.</div></div></li>
+      <li><span class="plan-num">05</span><div><div class="plan-name">Aviso de tiempo de entrega</div><div class="plan-desc">Las piezas personalizadas suelen tardar más en producirse — hay que confirmarlo con la clienta.</div><span class="plan-source">Pendiente de definir</span></div></li>
+    </ol>
+  </section>
+
+  <section>
     <h2>Checklist — qué falta por llenar</h2>
     <p class="section-intro">Cada bloque del plano, de dónde sale el dato y si ya está. Se guarda solo en este navegador, para ir tachando mientras llega la info — no sustituye el Excel.</p>
     <div class="table-wrap">
@@ -269,6 +295,7 @@ flowchart TD
           <tr><td class="block-name">Fotografía de producto</td><td class="needs">Fotos reales por pieza, aislada/editorial</td><td class="src">2 · Productos + fotos del cliente</td><td></td></tr>
           <tr><td class="block-name">Menú y colecciones</td><td class="needs">Lista de categorías, submenús</td><td class="src">3 · Navegación</td><td></td></tr>
           <tr><td class="block-name">Personalización/grabado</td><td class="needs">Si aplica y cómo funciona</td><td class="src">3 · Navegación</td><td></td></tr>
+          <tr><td class="block-name">Capturas de la página de personalización de PDPAOLA</td><td class="needs">Para ajustar el plano provisional al diseño real</td><td class="src">Pendiente — mandar screenshots</td><td></td></tr>
           <tr><td class="block-name">Páginas institucionales</td><td class="needs">Sobre nosotros, contacto, etc.</td><td class="src">3 · Navegación</td><td></td></tr>
           <tr><td class="block-name">Hero de Home</td><td class="needs">Mensaje/imagen principal</td><td class="src">4 · Contenido Home</td><td></td></tr>
           <tr><td class="block-name">Destacados de Home</td><td class="needs">Qué colecciones/piezas mostrar primero</td><td class="src">4 · Contenido Home</td><td></td></tr>

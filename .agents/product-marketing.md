@@ -1,7 +1,7 @@
 # Product Marketing Context
 
-**Document version:** v3
-**Last updated:** 2026-08-20
+**Document version:** v4
+**Last updated:** 2026-11-26
 
 ## Product Overview
 **One-liner:** A boutique couple-photography experience in Barcelona — styled, directed, and cinematic, built for real connection instead of posed tourist photos.
@@ -9,7 +9,7 @@
 **Product category:** Couple / romantic photography experience (Barcelona)
 **Product type:** Local creative service — in-person session + edited digital gallery
 **Business model:** Per-session pricing, three tiers (€400 / €550 / €650). No repeat-session guarantee offered. Future planned upsell: a personalized printed calendar, offered seasonally (e.g. Nov/Dec) to past clients — not live yet.
-**Site:** www.iloveyoubarcelona.com (hosted on Squarespace) · Instagram (brand): @iloveyoutoobcn
+**Site:** www.iloveyoubarcelona.com (hosted on Squarespace) · Instagram (brand): @iloveyouarchives
 
 ## Target Audience
 **Target customers:** Couples — both Barcelona locals and tourists/visitors who book in advance.
@@ -78,6 +78,14 @@ Not applicable — B2C, single decision-maker unit (the couple).
 | Chapter | One of the three session types (City / Wild / Intimate) |
 | Session | A single booked photo experience |
 
+## Service Details (confirmed 2026-11-26)
+- **Deliverable:** 15–25 edited photos per session (by chapter: 15–20 / 20–25 / 15–20).
+- **Direction & styling:** pre-session call to get to know each other + a moodboard built together. Styling (wardrobe) is the couple's own choice, defined together with us. On the day, Nuria directs the session.
+- **Proposals:** real service offered (price/format TBD).
+- **Privacy:** photos never published/shared without written consent; Chapter III never published unless the couple asks.
+- **Future:** tutorials built around the direction method.
+- **Languages:** site in English + Spanish. Spanish is Mexican register (ustedes, etc.) on purpose — it's the founders' own voice; do not convert to Spain Spanish.
+
 ## Brand Voice
 **Tone:** Romantic but not saccharine ("meloso") — real, raw, intense connection.
 **Style:** Cinematic — references film titles and short film-style dialogue rather than long descriptive prose (audience doesn't stop to read long copy).
@@ -87,26 +95,27 @@ Not applicable — B2C, single decision-maker unit (the couple).
 **Metrics:** None yet — pre-launch.
 **Customers:** None named yet — currently building portfolio through test sessions.
 **Instagram:**
-- @iloveyoutoobcn — brand feed, main portfolio proof for prospective clients
+- @iloveyouarchives — brand feed, main portfolio proof for prospective clients
 - @ojodearbol — Miguel Manzano's personal fine-art portfolio (nature/sensual editorial work)
 - @nuria.alferez — Nuria Alférez's personal fine-art portfolio (editorial/sensual portrait work)
 **Testimonials:** None yet — TBD as portfolio sessions complete.
 **Value themes:**
 | Theme | Proof |
 |-------|-------|
-| Real artistic direction, not generic tourist photos | Portfolio on @iloveyoutoobcn |
+| Real artistic direction, not generic tourist photos | Portfolio on @iloveyouarchives |
 | Founders are working artists, not just "a photographer" | @ojodearbol, @nuria.alferez personal portfolios |
 
 ## Goals
 **Business goal:** Move from portfolio-building/pre-launch to first paying bookings; establish local reputation in Barcelona.
 **Conversion action:** Submit inquiry via contact form (no booking calendar yet — planned for later).
 **Current metrics:** None — pre-launch.
-**Capacity:** 1–3 sessions/month today (Tuesdays only), scalable to 4–8/month later. Current goal is supplemental income, not full-time. Scarcity ("only 1–3 couples a month") is treated as an honest positioning point, not manufactured urgency.
+**Capacity:** Limited today, scalable later. Current goal is supplemental income, not full-time. Decision (2026-11-26): do NOT state "only 1–3 sessions/month" on the site.
 **Distribution strategy:** Own site is the primary, full-brand, full-price channel (all three chapters). Airbnb Experiences / Viator get one simplified listing only (Love & The City equivalent), capped at 0–1 booking/month while capacity is limited — price TBD, separate from direct-site pricing. Google search is the intended primary discovery channel (deliberately not reliant on Instagram's algorithm).
 **SEO status (as of 2026-08-20):** Site not yet indexed by Google at all (`site:iloveyoubarcelona.com` returns zero results). Google Search Console + sitemap submission still needed before any SEO/content work can pay off. Paid search (Google Ads) is not recommended yet — site isn't indexed, capacity is only 1–3 sessions/month, and there are no testimonials/proof yet to convert cold paid traffic.
 
 ## Changelog
 *Newest first.*
+- v4 (2026-11-26) — After live-site audit: Instagram is @iloveyouarchives (only active account; @iloveyoutoobcn retired); proposals are a real service; direction & styling defined; 15–25 photos per session; Mexican Spanish is a deliberate brand voice; audience is both EN tourists and ES-speaking locals; no scarcity claim on site; old red "This is your love story" card retired — current card is the Canva pattern/cream design.
 - v3 (2026-08-20) — Corrected site domain to www.iloveyoubarcelona.com (www.iloveyoubcn.com, printed on the first business card proof, does not resolve — was a card error, now fixed on card files too); added SEO status note (site not indexed yet) and Google Ads recommendation.
 - v2 (2026-08-14) — Added founders' real names (Nuria Alférez, Miguel Manzano); corrected chapter pricing to €400/€550/€650 with final chapter names; added site domain, capacity/scarcity positioning, and distribution channel strategy (own site vs. Airbnb/Viator).
 - v1 (2026-08-08) — Initial context, drafted from landing page copywriting sessions (hero, three chapters/pricing, Instagram proof accounts).

@@ -14,7 +14,7 @@
 |---|----------|-------|-----------------|
 | 0.1 | **Páginas legales en "Lorem ipsum"**: Privacy Policy, Refund Policy, Terms of Service y Accessibility Statement son texto de relleno de la plantilla. | `/privacy-policy`, `/refund-policy`, `/tos`, `/accessibility-policy` | Recogéis nombre, email y WhatsApp en el formulario: en España una política de privacidad real (RGPD) y un aviso legal (LSSI: titular, NIF, contacto) son obligatorios. Además **están en el sitemap**, así que Google puede indexar "Lorem ipsum" con vuestra marca. La única página legal real es la de cookies. |
 | 0.2 | **No hay política de cancelación del anticipo del 50 %.** Se explica el cambio de fecha (3 días), pero no qué pasa si la pareja cancela. | `/services` | Es la primera duda de quien paga un anticipo por Bizum a alguien que no conoce. Y la "Refund Policy" es Lorem ipsum. |
-| 0.3 | **Instagram equivocado (o al menos distinto al manual).** Todo el sitio enlaza a `@iloveyouarchives`; el manual y la tarjeta impresa dicen `@iloveyoutoobcn`. | Cabecera y pie de todas las páginas | Si la tarjeta lleva a una cuenta y la web a otra, se rompe la prueba social, que es vuestra principal arma de venta. Hay que decidir una y unificar. |
+| 0.3 | ✅ *Resuelto: la cuenta oficial es `@iloveyouarchives`; falta cambiarla en la tarjeta de Canva.* **Instagram equivocado (o al menos distinto al manual).** Todo el sitio enlaza a `@iloveyouarchives`; el manual y la tarjeta impresa dicen `@iloveyoutoobcn`. | Cabecera y pie de todas las páginas | Si la tarjeta lleva a una cuenta y la web a otra, se rompe la prueba social, que es vuestra principal arma de venta. Hay que decidir una y unificar. |
 | 0.4 | **Títulos que desaparecen en escritorio.** El H1 de Servicios ("Every love story deserves to be seen") y el H2 de About ("We are Nuria & Miguel") se ven diminutos (≈6 px) en la esquina superior izquierda. En móvil sí se ven. | `/services`, `/about` (y sus versiones ES) | Fallo de maquetación del Fluid Engine en la vista de escritorio. Es lo primero que ve alguien que entra desde Google en ordenador. |
 | 0.5 | **Hueco vacío enorme en la home (escritorio).** El bloque de texto del hero mide ~1350 px de alto: debajo del botón "Our services" quedan unos 700 px de fondo beige vacío antes de "More Love Stories". | `/` | Parece una web rota o a medio cargar; mucha gente deja de hacer scroll ahí. |
 | 0.6 | **Formulario de contacto: verificadlo en vuestro móvil.** En mi entorno no se dibujó (depende de reCAPTCHA de Google, que yo tengo bloqueado), así que puede ser cosa mía. Pero comprobad que se ve y que llega el email de aviso. | `/contact`, `/contacto` | Es vuestra única conversión. Si falla, la web no vende nada. |
@@ -100,14 +100,12 @@ El manual dice una cosa y la web otra en varios puntos de fondo:
 
 ## 4. Versión en español
 
-- **Menú, botones, pie, banner de cookies y mensaje de WhatsApp siguen en inglés** en las páginas ES ("About", "Let's work together"…).
-- El botón "Pedir información" de `/servicios` lleva a `/contact` (inglés), no a `/contacto`.
-- **Todas las páginas declaran `lang="en-US"`**, incluidas las españolas, y no hay etiquetas `hreflang`. Google no sabe que `/inicio` es la versión ES de `/`.
-- En `/inicio` el titular es un H3: la página no tiene H1.
-- **Registro:** el español es de México ("ustedes", "locaciones", "Llueva o truene", "anticipación", "les respondemos"). Para una pareja de Barcelona suena extraño ("localizaciones", "vosotros", "con antelación"). Puede ser una elección consciente (es vuestra voz); ver preguntas.
-- ¿Y el catalán? Para el público local de Barcelona, al menos la home en catalán es un gesto que se nota.
+> **Corrección (26 nov, tras comprobarlo en el navegador):** la primera versión de este punto decía que el menú, los botones y el banner salían en inglés. No es así: el script del pie de página los traduce al cargar la página, marca las páginas como `es`, añade las etiquetas `hreflang` y lleva "Pedir información" a `/contacto`. Mi primera lectura fue del HTML sin ejecutar ese script.
 
----
+Lo que sí queda pendiente:
+- En `/inicio` el titular es un H3: la página no tiene H1.
+- Las etiquetas `hreflang` dependen de JavaScript; mejor ponerlas también en el HTML de cada página (ver `brand/web/squarespace-codigo.md`, §2).
+- **Registro:** el español mexicano ("ustedes", "locaciones") es una **decisión de marca**: es la voz de Nuria y Miguel. Se mantiene.
 
 ## 5. Diseño visual
 
